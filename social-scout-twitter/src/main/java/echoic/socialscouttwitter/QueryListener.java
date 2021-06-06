@@ -17,9 +17,10 @@ public class QueryListener
             @Override
             public void onStatus(Status status) {
                 log.info("User @" + status.getUser().getScreenName()
-                        + " tweeted " + status.getText() +
-                        " at " + status.getCreatedAt().toString());
-                QueryTokenizer.tokenize(status);
+                        + " tweeted \"" + status.getText() +
+                        "\" at " + status.getCreatedAt().toString());
+                //QueryTokenizer.tokenize(status);
+                String searchString = SearchExtractor.getSearchString(status.getText());
             }
 
             @Override
