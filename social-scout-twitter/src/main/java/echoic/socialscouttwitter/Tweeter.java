@@ -2,6 +2,7 @@ package echoic.socialscouttwitter;
 
 import lombok.extern.slf4j.Slf4j;
 import twitter4j.Status;
+import twitter4j.StatusUpdate;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 
@@ -35,6 +36,35 @@ public class Tweeter
             log.info(e.getErrorMessage());
             return null;
         }
+
+    }
+
+    public Status replyWithLink(Status incomingPost, MusicEntity song)
+    {
+        String details = "@" + incomingPost.getUser().getScreenName() +"\n" +
+                         "Title: " + song.getSongName() +"\n" +
+                         "Artist: " + song.getArtistName() +"\n" +
+                         "Album: " + song.getAlbumName() +"\n" +
+                         song.getLink();
+
+        StatusUpdate response = new StatusUpdate(details);
+        long tweetId = incomingPost.getId();
+        response.inReplyToStatusId(tweetId);
+
+        try
+        {
+            Status post = this.twitter.updateStatus(response);
+            return post;
+        }
+        catch(TwitterException e)
+        {
+            log.info(e.getErrorMessage());
+            return null;
+        }
+
+
+
+
 
     }
 }
