@@ -5,11 +5,13 @@ import lombok.Data;
 @Data
 public class MusicEntity
 {
+    private String artistName;
+    private String albumName;
+    private String songName;
     private String link;
-    private MusicEntityType type;
 }
 
 enum MusicEntityType
 {
-    SONG, ALBUM, ARTIST;
+    SONG, ALBUM, ARTIST
 }

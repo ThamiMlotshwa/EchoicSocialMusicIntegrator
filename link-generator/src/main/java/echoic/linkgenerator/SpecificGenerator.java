@@ -2,6 +2,5 @@ package echoic.linkgenerator;
 
 public interface SpecificGenerator
 {
-    public MusicEntity getEntity(String searchTerm, MusicEntityType type);
-
+    public MusicEntity generateMusicEntity(String searchTerm);
 }
