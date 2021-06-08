@@ -31,9 +31,9 @@ public class LinkReturnerRestController
     }
 
     @GetMapping("getLinks")
-    public List<MusicEntity> getLinks(String searchTerm, String type)
+    public List<MusicEntity> getLinks(String searchTerm)
     {
-        MusicEntity musicEntity = appleSpecificGenerator.getEntity(searchTerm, MusicEntityType.valueOf(type));
+        MusicEntity musicEntity = appleSpecificGenerator.generateMusicEntity(searchTerm);
         List<MusicEntity> musicEntities = new ArrayList<>();
         musicEntities.add(musicEntity);
         return musicEntities;
