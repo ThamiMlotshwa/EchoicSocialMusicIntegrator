@@ -5,45 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/EchoicSocialMusicIntegrator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/MusicEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkReturnerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkReturnerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/MusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/MusicEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkReturnerRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkReturnerRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntityType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntityType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_buffer_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_codec_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_common_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_handler_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_resolver_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_transport_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_63_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_0_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_0_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/.idea/libraries/Maven__org_springframework_spring_webflux_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/social-scout-twitter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/social-scout-twitter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/QueryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/QueryListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/SocialScoutConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/SocialScoutConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/Tweeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/Tweeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SearchExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SearchExtractor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SocialScoutConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SocialScoutConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/Tweeter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/Tweeter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
