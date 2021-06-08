@@ -2,8 +2,10 @@ package echoic.linkgenerator;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class MusicEntity
+public class MusicEntity implements Serializable
 {
     private String artistName;
     private String albumName;

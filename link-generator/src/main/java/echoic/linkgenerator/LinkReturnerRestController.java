@@ -2,18 +2,19 @@ package echoic.linkgenerator;
 
 import be.ceau.itunesapi.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import be.ceau.itunesapi.Search;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping(path="/returnLinks",
+        produces="application/json")
+@CrossOrigin(origins="*")
 public class LinkReturnerRestController
 {
-    private AppleSpecificGenerator appleSpecificGenerator;
-
+    AppleSpecificGenerator appleSpecificGenerator;
 
     @Autowired
     public LinkReturnerRestController(AppleSpecificGenerator appleSpecificGenerator)
@@ -30,12 +31,13 @@ public class LinkReturnerRestController
         return response.toString();
     }
 
-    @GetMapping("getLinks")
-    public List<MusicEntity> getLinks(String searchTerm)
+    @GetMapping("{searchTerm}")
+    public MusicEntity getLinks(@PathVariable("searchTerm") String searchTerm)
     {
         MusicEntity musicEntity = appleSpecificGenerator.generateMusicEntity(searchTerm);
         List<MusicEntity> musicEntities = new ArrayList<>();
         musicEntities.add(musicEntity);
-        return musicEntities;
+
+        return musicEntity;
     }
 }
