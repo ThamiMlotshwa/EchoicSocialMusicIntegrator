@@ -14,12 +14,12 @@ import java.util.List;
 @CrossOrigin(origins="*")
 public class LinkReturnerRestController
 {
-    AppleSpecificGenerator appleSpecificGenerator;
+    SpecificGenerator specificGenerator;
 
     @Autowired
-    public LinkReturnerRestController(AppleSpecificGenerator appleSpecificGenerator)
+    public LinkReturnerRestController(SpecificGenerator specificGenerator)
     {
-        this.appleSpecificGenerator = appleSpecificGenerator;
+        this.specificGenerator = specificGenerator;
     }
 
     @GetMapping("/test")
@@ -34,7 +34,7 @@ public class LinkReturnerRestController
     @GetMapping("{searchTerm}")
     public MusicEntity getLinks(@PathVariable("searchTerm") String searchTerm)
     {
-        MusicEntity musicEntity = appleSpecificGenerator.generateMusicEntity(searchTerm);
+        MusicEntity musicEntity = specificGenerator.generateMusicEntity(searchTerm);
         List<MusicEntity> musicEntities = new ArrayList<>();
         musicEntities.add(musicEntity);
 

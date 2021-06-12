@@ -5,3 +5,8 @@ spring:
 
 server:
   port : 8081
+
+spotify:
+  clientApi:
+    id: ceb4c7c7d1534a51aeff382bffd76083
+    secret: 2696904774f8404da221cf990431b652
