@@ -14,8 +14,10 @@ import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.hc.core5.http.ParseException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.net.URI;
@@ -59,16 +61,21 @@ public class LinkGeneratorConfig
         return spotifyApi.clientCredentials().build();
     }
 
-    @Bean
+    /*@Bean
     public SpecificGenerator specificGenerator(SpotifyApi spotifyApi)
     {
         return new SpotifySpecificGenerator(spotifyApi);
+    }*/
+
+    @Bean
+    public RestTemplate restTemplate()
+    {
+        return new RestTemplateBuilder().build();
     }
 
-    /*
     @Bean
     public SpecificGenerator specificGenerator()
     {
-        return new AppleSpecificGenerator();
-    }*/
+        return new AppleSpecificGenerator(restTemplate());
+    }
 }

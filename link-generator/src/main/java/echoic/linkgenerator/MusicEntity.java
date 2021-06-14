@@ -10,7 +10,7 @@ public class MusicEntity implements Serializable
     private String artistName;
     private String albumName;
     private String songName;
-    private String link;
+    private String Link;
 }
 
 enum MusicEntityType
