@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.cloud:spring-cloud-commons:3.0.4-SNAPSHOT">
     <CLASSES>
+<<<<<<< Updated upstream
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/3.0.4-SNAPSHOT/spring-cloud-commons-3.0.4-20210606.084617-23.jar!/" />
     </CLASSES>
     <JAVADOC>
@@ -8,6 +9,15 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/3.0.4-SNAPSHOT/spring-cloud-commons-3.0.4-20210606.084617-23-sources.jar!/" />
+=======
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/3.0.4-SNAPSHOT/spring-cloud-commons-3.0.4-20210617.191456-47.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/3.0.4-SNAPSHOT/spring-cloud-commons-3.0.4-20210617.191456-47-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-commons/3.0.4-SNAPSHOT/spring-cloud-commons-3.0.4-20210617.191456-47-sources.jar!/" />
+>>>>>>> Stashed changes
     </SOURCES>
   </library>
 </component>

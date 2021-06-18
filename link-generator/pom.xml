@@ -68,7 +68,7 @@
 		<dependency>
 			<groupId>be.ceau</groupId>
 			<artifactId>itunes-api</artifactId>
-			<version>4.0</version>
+			<version>4.6.0</version>
 		</dependency>
 
 	</dependencies>

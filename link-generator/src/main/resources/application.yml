@@ -5,3 +5,18 @@ spring:
 
 server:
   port : 8081
+<<<<<<< Updated upstream
+=======
+
+spotify:
+  clientApi:
+    id: ceb4c7c7d1534a51aeff382bffd76083
+    secret: 2696904774f8404da221cf990431b652
+
+tinycc:
+  user: thami
+  key: 1280acc1-86b5-4bda-99bc-4a49dbb77813
+
+tinyurl:
+  apiKey: lHlgOHwTFbRTUOwT8laOJAEBlOgd6kJVqWCPrp73fa7deCECDyk9VoXZpMVO
+>>>>>>> Stashed changes

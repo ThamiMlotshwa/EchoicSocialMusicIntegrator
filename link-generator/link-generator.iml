@@ -97,7 +97,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: io.projectreactor:reactor-test:3.4.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.projectreactor:reactor-core:3.4.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
-    <orderEntry type="library" name="Maven: be.ceau:itunes-api:4.0" level="project" />
+    <orderEntry type="library" name="Maven: be.ceau:itunes-api:4.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
   </component>
 </module>
