@@ -4,22 +4,18 @@ import be.ceau.itunesapi.Search;
 import be.ceau.itunesapi.request.Entity;
 import be.ceau.itunesapi.response.Response;
 import be.ceau.itunesapi.response.Result;
-<<<<<<< Updated upstream
-=======
+
 import echoic.linkgenerator.external.linktracking.TrackedUrl;
 import echoic.linkgenerator.external.linktracking.TrackedUrlHeader;
 import echoic.linkgenerator.external.musicentity.ExternalMusicEntity;
-import echoic.linkgenerator.external.musicentity.ItunesMusicEntities;
-import echoic.linkgenerator.external.musicentity.ItunesMusicEntity;
 import lombok.extern.slf4j.Slf4j;
-import net.minidev.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
->>>>>>> Stashed changes
 
 import java.net.URI;
 import java.util.Base64;
@@ -28,18 +24,22 @@ import java.util.Map;
 @Slf4j
 public class AppleSpecificGenerator implements SpecificGenerator
 {
+    private RestTemplate restTemplate;
+
+    @Autowired
+    public AppleSpecificGenerator(RestTemplate restTemplate)
+    {
+        this.restTemplate = restTemplate;
+    }
+
     @Override
     public MusicEntity generateMusicEntity(String searchTerm) {
         Search search = new Search();
         Entity searchEntity = Entity.SONG;
         String link;
 
-<<<<<<< Updated upstream
-=======
         //ToDO: Put a timeout counter and a fallback function in case of REST failure
-
-
-        URI targetUrl = UriComponentsBuilder.fromUriString("https://itunes.apple.com")
+        /*URI targetUrl = UriComponentsBuilder.fromUriString("https://itunes.apple.com")
                 .path("search")
                 .queryParam("term", searchTerm)
                 .build()
@@ -48,21 +48,19 @@ public class AppleSpecificGenerator implements SpecificGenerator
 
         //ItunesMusicEntities searchedResult = restTemplate.getForObject(targetUrl, ItunesMusicEntities.class);
 
->>>>>>> Stashed changes
+        */
         Response response = search.setTerm(searchTerm)
                 .setEntity(searchEntity)
                 .execute();
 
-        if (response.getResultCount() < 1) {
+        if (response.getResultCount() < 1)
+        {
             return null;
-<<<<<<< Updated upstream
+        }
+
 
         Result firstResult = response.getResults().get(0);
-        MusicEntity musicEntity = new MusicEntity();
-        musicEntity.setLink(firstResult.getTrackViewUrl());
-=======
-        }
-        Result firstResult = response.getResults().get(0);
+
 
         //ToDO: Put a timeout counter and a fallback function in case of REST failure
 
@@ -89,14 +87,10 @@ public class AppleSpecificGenerator implements SpecificGenerator
         // Make and populate MusicEntity object
         MusicEntity musicEntity = new MusicEntity();
         musicEntity.setLink(trackedUrl.getShortUrl());
->>>>>>> Stashed changes
         musicEntity.setSongName(firstResult.getTrackName());
         musicEntity.setAlbumName(firstResult.getCollectionName());
         musicEntity.setArtistName(firstResult.getArtistName());
         musicEntity.setCode(firstResult.getTrackId());
-
-<<<<<<< Updated upstream
-=======
 
         //ToDo: Add persistence for the music entity in a database
         //          - Save music entity according to unique identifier
@@ -104,8 +98,6 @@ public class AppleSpecificGenerator implements SpecificGenerator
         //          - Add "clicked" counter (Need social scout integration)
 
 
-
->>>>>>> Stashed changes
         return musicEntity;
     }
 }

@@ -1,23 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.cloud:spring-cloud-starter:3.0.4-SNAPSHOT">
     <CLASSES>
-<<<<<<< Updated upstream
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210606.084646-23.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210619.084631-51.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210606.084646-23-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210619.084631-51-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210606.084646-23-sources.jar!/" />
-=======
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210617.191545-47.jar!/" />
-    </CLASSES>
-    <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210617.191545-47-javadoc.jar!/" />
-    </JAVADOC>
-    <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210617.191545-47-sources.jar!/" />
->>>>>>> Stashed changes
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/3.0.4-SNAPSHOT/spring-cloud-starter-3.0.4-20210619.084631-51-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

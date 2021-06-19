@@ -11,10 +11,7 @@ public class MusicEntity implements Serializable
     private String albumName;
     private String songName;
     private String link;
-<<<<<<< Updated upstream
-=======
     private Long code;
->>>>>>> Stashed changes
 }
 
 enum MusicEntityType
