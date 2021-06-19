@@ -8,6 +8,7 @@ import be.ceau.itunesapi.response.Result;
 import echoic.linkgenerator.external.linktracking.TrackedUrl;
 import echoic.linkgenerator.external.linktracking.TrackedUrlHeader;
 import echoic.linkgenerator.external.musicentity.ExternalMusicEntity;
+import echoic.linkgenerator.repos.mongo.MusicEntityRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -27,6 +28,9 @@ public class AppleSpecificGenerator implements SpecificGenerator
     private RestTemplate restTemplate;
 
     @Autowired
+    private MusicEntityRepo musicEntityRepo;
+
+    @Autowired
     public AppleSpecificGenerator(RestTemplate restTemplate)
     {
         this.restTemplate = restTemplate;
@@ -36,7 +40,6 @@ public class AppleSpecificGenerator implements SpecificGenerator
     public MusicEntity generateMusicEntity(String searchTerm) {
         Search search = new Search();
         Entity searchEntity = Entity.SONG;
-        String link;
 
         //ToDO: Put a timeout counter and a fallback function in case of REST failure
         /*URI targetUrl = UriComponentsBuilder.fromUriString("https://itunes.apple.com")
@@ -90,7 +93,10 @@ public class AppleSpecificGenerator implements SpecificGenerator
         musicEntity.setSongName(firstResult.getTrackName());
         musicEntity.setAlbumName(firstResult.getCollectionName());
         musicEntity.setArtistName(firstResult.getArtistName());
-        musicEntity.setCode(firstResult.getTrackId());
+        musicEntity.setCode(firstResult.getTrackId().toString());
+        musicEntity.setClicks(0L);
+
+        musicEntityRepo.save(musicEntity);
 
         //ToDo: Add persistence for the music entity in a database
         //          - Save music entity according to unique identifier
