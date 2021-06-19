@@ -1,6 +1,13 @@
 package echoic.linkgenerator;
 
 import be.ceau.itunesapi.Search;
+import com.mongodb.ClientSessionOptions;
+import com.mongodb.ConnectionString;
+import com.mongodb.MongoClientSettings;
+import com.mongodb.client.ClientSession;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
@@ -17,6 +24,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.support.PersistenceExceptionTranslator;
+import org.springframework.data.mongodb.MongoDatabaseFactory;
+import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.MongoTransactionManager;
+import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
@@ -31,6 +45,7 @@ public class LinkGeneratorConfig
 
     @Value("${spotify.clientApi.secret}")
     private String spotifyClientSecret;
+
 
     @Bean
     public SpotifyApi spotifyApi() throws IOException, SpotifyWebApiException, ParseException {
@@ -61,11 +76,11 @@ public class LinkGeneratorConfig
         return spotifyApi.clientCredentials().build();
     }
 
-    /*@Bean
+    @Bean
     public SpecificGenerator specificGenerator(SpotifyApi spotifyApi)
     {
-        return new SpotifySpecificGenerator(spotifyApi);
-    }*/
+        return new SpotifySpecificGenerator(spotifyApi, restTemplate());
+    }
 
     @Bean
     public RestTemplate restTemplate()
@@ -78,4 +93,5 @@ public class LinkGeneratorConfig
     {
         return new AppleSpecificGenerator(restTemplate());
     }
+
 }

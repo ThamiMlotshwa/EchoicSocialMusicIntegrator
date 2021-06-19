@@ -2,6 +2,12 @@ spring:
   cloud:
     config:
       enabled: false
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: test
+
 
 server:
   port : 8081
