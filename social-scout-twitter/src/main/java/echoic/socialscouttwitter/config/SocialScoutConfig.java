@@ -1,10 +1,8 @@
 package echoic.socialscouttwitter.config;
 
-import echoic.socialscouttwitter.core.MusicEntityGenerator;
-import echoic.socialscouttwitter.core.MusicEntityGeneratorImpl;
-import echoic.socialscouttwitter.core.PostHandler;
-import echoic.socialscouttwitter.core.PostHandlerImp;
+import echoic.socialscouttwitter.core.*;
 import echoic.socialscouttwitter.post.Tweeter;
+import echoic.socialscouttwitter.post.TweeterImp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -65,7 +63,7 @@ public class SocialScoutConfig
     @Bean
     Tweeter tweeter(Twitter twitter)
     {
-        return new Tweeter(twitter);
+        return new TweeterImp(twitter);
     }
 
     @Bean
@@ -81,8 +79,15 @@ public class SocialScoutConfig
     }
 
     @Bean
-    PostHandler postHandler(Tweeter tweeter, MusicEntityGenerator musicEntityGenerator)
+    PostHandler postHandler(Tweeter tweeter, MusicEntityGenerator musicEntityGenerator,
+                            QueryTokenizer queryTokenizer)
     {
-        return new PostHandlerImp(tweeter, musicEntityGenerator);
+        return new PostHandlerImp(tweeter, musicEntityGenerator, queryTokenizer);
+    }
+
+    @Bean
+    QueryTokenizer queryTokenizer()
+    {
+        return new QueryTokenizerImp();
     }
 }

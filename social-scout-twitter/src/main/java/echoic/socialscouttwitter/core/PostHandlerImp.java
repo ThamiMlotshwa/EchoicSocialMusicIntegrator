@@ -12,11 +12,14 @@ public class PostHandlerImp implements PostHandler
 {
     private Tweeter tweeter;
     private MusicEntityGenerator musicEntityGenerator;
+    private QueryTokenizer queryTokenizer;
 
-    public PostHandlerImp(Tweeter tweeter, MusicEntityGenerator musicEntityGenerator)
+    public PostHandlerImp(Tweeter tweeter, MusicEntityGenerator musicEntityGenerator,
+                          QueryTokenizer queryTokenizer)
     {
         this.tweeter = tweeter;
         this.musicEntityGenerator = musicEntityGenerator;
+        this.queryTokenizer = queryTokenizer;
     }
 
     @Override
@@ -28,7 +31,7 @@ public class PostHandlerImp implements PostHandler
         {
             try
             {
-                String searchString = SearchExtractor.getSearchString(incomingPost.getText());
+                String searchString = queryTokenizer.getSearchString(incomingPost.getText());
                 if (searchString != null)
                 {
                     Optional<MusicEntity> optionalSong = musicEntityGenerator.getMusicEntity(searchString);
