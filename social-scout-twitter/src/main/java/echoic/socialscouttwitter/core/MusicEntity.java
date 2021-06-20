@@ -1,4 +1,4 @@
-package echoic.socialscouttwitter;
+package echoic.socialscouttwitter.core;
 
 import lombok.Data;
 
