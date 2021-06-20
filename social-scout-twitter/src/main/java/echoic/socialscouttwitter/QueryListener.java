@@ -1,12 +1,14 @@
 package echoic.socialscouttwitter;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import twitter4j.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Component
 @Slf4j
@@ -33,7 +35,7 @@ public class QueryListener
                     String searchString = SearchExtractor.getSearchString(status.getText());
 
                     if (searchString != null) {
-                        MusicEntity song = getMusicEntity(searchString);
+                        MusicEntity song = getMusicEntity(searchString).orElseThrow();
                         log.info("" + song);
                         tweeter.replyWithLink(status, song);
                     }
@@ -68,20 +70,24 @@ public class QueryListener
         twitterStream.filter(filterQuery);
     }
 
-    private MusicEntity getMusicEntity(String searchTerm)
+    private Optional<MusicEntity> getMusicEntity(String searchTerm)
     {
+        MusicEntity song = null;
         Map<String, String> urlVars = new HashMap<>();
         urlVars.put("searchTerm", searchTerm);
         try {
-            MusicEntity song = restTemplate.getForObject("http://localhost:8081/returnLinks/{searchTerm}",
+            ResponseEntity<MusicEntity> response = restTemplate.getForEntity("http://localhost:8081/returnLinks/{searchTerm}",
                     MusicEntity.class, urlVars);
-            return song;
+            if (response.hasBody())
+            {
+                song = response.getBody();
+            }
         }
         catch(Exception e)
         {
             log.error(e.getMessage());
         }
-        return null;
+        return Optional.ofNullable(song);
 
     }
 }
