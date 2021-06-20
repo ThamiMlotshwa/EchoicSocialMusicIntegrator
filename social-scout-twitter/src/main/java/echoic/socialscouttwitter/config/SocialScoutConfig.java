@@ -90,4 +90,5 @@ public class SocialScoutConfig
     {
         return new QueryTokenizerImp();
     }
+    
 }
