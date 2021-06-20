@@ -1,6 +1,7 @@
 package echoic.socialscouttwitter.core;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -30,7 +31,7 @@ public class MusicEntityGeneratorImpl implements MusicEntityGenerator
             ResponseEntity<MusicEntity> response = restTemplate.getForEntity("http://localhost:8081/returnLinks/{searchTerm}",
                     MusicEntity.class, urlVars);
 
-            if (response.hasBody())
+            if (response.hasBody() && response.getStatusCodeValue() == HttpStatus.OK.value())
             {
                 musicEntity = response.getBody();
             }
@@ -38,6 +39,7 @@ public class MusicEntityGeneratorImpl implements MusicEntityGenerator
         catch(Exception e)
         {
             log.error(e.getMessage());
+            throw e;
         }
         return Optional.ofNullable(musicEntity);
     }
