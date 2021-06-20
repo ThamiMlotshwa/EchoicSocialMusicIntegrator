@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ExternalMusicEntity
+public class ExternalAgnosticMusicEntity
 {
     @JsonProperty("entityUniqueId")
     String entityUniqueId;
