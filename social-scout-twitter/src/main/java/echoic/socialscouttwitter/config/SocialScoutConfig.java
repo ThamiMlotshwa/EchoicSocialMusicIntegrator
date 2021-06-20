@@ -1,5 +1,9 @@
 package echoic.socialscouttwitter.config;
 
+import echoic.socialscouttwitter.core.MusicEntityGenerator;
+import echoic.socialscouttwitter.core.MusicEntityGeneratorImpl;
+import echoic.socialscouttwitter.core.PostHandler;
+import echoic.socialscouttwitter.core.PostHandlerImp;
 import echoic.socialscouttwitter.post.Tweeter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -68,5 +72,17 @@ public class SocialScoutConfig
     RestTemplate restTemplate()
     {
         return new RestTemplate();
+    }
+
+    @Bean
+    MusicEntityGenerator musicEntityGenerator(RestTemplate restTemplate)
+    {
+        return new MusicEntityGeneratorImpl(restTemplate);
+    }
+
+    @Bean
+    PostHandler postHandler(Tweeter tweeter, MusicEntityGenerator musicEntityGenerator)
+    {
+        return new PostHandlerImp(tweeter, musicEntityGenerator);
     }
 }

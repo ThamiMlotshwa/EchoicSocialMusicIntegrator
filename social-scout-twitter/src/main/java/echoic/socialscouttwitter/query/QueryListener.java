@@ -1,5 +1,6 @@
 package echoic.socialscouttwitter.query;
 
+import echoic.socialscouttwitter.core.PostHandler;
 import echoic.socialscouttwitter.core.SearchExtractor;
 import echoic.socialscouttwitter.core.MusicEntity;
 import echoic.socialscouttwitter.core.TokenizationException;
@@ -19,38 +20,31 @@ public class QueryListener
     private TwitterStream twitterStream;
     private RestTemplate restTemplate;
     private Tweeter tweeter;
+    private PostHandler postHandler;
 
-    public QueryListener(TwitterStream twitterStream, RestTemplate restTemplate, Tweeter tweeter, FilterQuery filterQuery)
+    public QueryListener(TwitterStream twitterStream,
+                         RestTemplate restTemplate,
+                         Tweeter tweeter,
+                         FilterQuery filterQuery,
+                         PostHandler postHandler)
     {
         this.twitterStream = twitterStream;
         this.restTemplate = restTemplate;
         this.tweeter = tweeter;
+        this.postHandler = postHandler;
 
         this.twitterStream.addListener(new StatusListener() {
             @Override
-            public void onStatus(Status status) {
-                log.info("User @" + status.getUser().getScreenName()
-                        + " tweeted \"" + status.getText() +
-                        "\" at " + status.getCreatedAt().toString());
+            public void onStatus(Status incomingStatus) {
+                log.info("User @" + incomingStatus.getUser().getScreenName()
+                        + " tweeted \"" + incomingStatus.getText() +
+                        "\" at " + incomingStatus.getCreatedAt().toString());
 
-                if (!status.isRetweet())
-                {
-                    try
-                    {
-                        String searchString = SearchExtractor.getSearchString(status.getText());
-                        if (searchString != null)
-                        {
-                            MusicEntity song = getMusicEntity(searchString);
-                            log.info("" + song);
-                            tweeter.replyWithLink(status, song);
-                        }
-                    }
-                    catch (TokenizationException e)
-                    {
-                        log.info("TokenizationException" + e.getMessage());
-                        tweeter.replyWithTokenizationProblem(status);
-                    }
-                }
+                Status outgoingStatus = postHandler.handlePost(incomingStatus).orElseThrow();
+
+                log.info(("User @" + outgoingStatus.getUser().getScreenName()
+                        + " tweeted \"" + outgoingStatus.getText() +
+                        "\" at " + outgoingStatus.getCreatedAt().toString()));
             }
 
             @Override
@@ -79,22 +73,5 @@ public class QueryListener
             }
         });
         twitterStream.filter(filterQuery);
-    }
-
-    private MusicEntity getMusicEntity(String searchTerm)
-    {
-        Map<String, String> urlVars = new HashMap<>();
-        urlVars.put("searchTerm", searchTerm);
-        try {
-            MusicEntity song = restTemplate.getForObject("http://localhost:8081/returnLinks/{searchTerm}",
-                    MusicEntity.class, urlVars);
-            return song;
-        }
-        catch(Exception e)
-        {
-            log.error(e.getMessage());
-        }
-        return null;
-
     }
 }
