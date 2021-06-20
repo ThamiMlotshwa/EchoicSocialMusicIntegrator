@@ -5,28 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_reactivestreams_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_reactive_2_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/repos/mongo/MusicEntityRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/UrlTracker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/AgnosticMusicEntityGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalTrackedUrlGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/FullGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/MusicEntityConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/Searcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/SearcherConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/link-generator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/AppleSpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/AppleSpecificGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkGeneratorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkGeneratorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/MusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/MusicEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/SpotifySpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/SpotifySpecificGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/AppleSpecificGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/AppleSpecificGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkGeneratorConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkGeneratorConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntityType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/SpotifySpecificGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/SpotifySpecificGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/AppleSpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/AppleAgnosticLinkGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkGeneratorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/config/LinkGeneratorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkReturnerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/rest/LinkReturnerRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/MusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/MusicEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/SpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/AgnosticLinkGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/SpotifySpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/ExternalMusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/ExternalAgnosticMusicEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TrackedUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TrackedUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/repos/mongo/MusicEntityRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/repos/mongo/MusicEntityRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/AppleSpecificGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkGeneratorConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkReturnerRestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/SpecificGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/SpotifySpecificGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/ExternalMusicEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TrackedUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TrackedUrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/repos/mongo/MusicEntityRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/repos/mongo/MusicEntityRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/QueryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/QueryListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/SocialScoutConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/SocialScoutConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SocialScoutConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SocialScoutConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +52,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -58,13 +74,18 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="echoic.linkgenerator.core" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="LinkGeneratorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.LinkGeneratorApplication" />
       <module name="link-generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="echoic.linkgenerator.*" />
+          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,6 +123,20 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="trackedUrl" />

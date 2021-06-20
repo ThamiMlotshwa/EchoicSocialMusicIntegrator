@@ -1,7 +1,6 @@
 package echoic.linkgenerator.repos.mongo;
 
-import echoic.linkgenerator.MusicEntity;
-import org.springframework.data.mongodb.repository.Aggregation;
+import echoic.linkgenerator.core.MusicEntity;
 import org.springframework.data.mongodb.repository.CountQuery;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
