@@ -4,49 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/integrationtests/AgnosticLinkGenerator_IntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/integrationtests/SearcherConverter_IntegrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/config/LinkGeneratorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/config/LinkGeneratorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/AgnosticLinkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/AgnosticLinkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/AgnosticMusicEntityGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/AgnosticMusicEntityGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/ExternalAgnosticMusicEntityGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/ExternalGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalTrackedUrlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/ExternalTrackedUrlGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/FullGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/FullGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/MusicEntityConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/MusicEntityConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/Searcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/SearcherConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/SearcherConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/unittests/TrackedUrlGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/rest/LinkReturnerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/rest/LinkReturnerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator_UnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/unittests/ExternalAgnosticMusicEntityGenerator_UnitTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/interfaces/SearcherConverter_UnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/unittests/SearcherConverter_UnitTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator_UnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/unittests/TrackedUrlGenerator_UnitTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/config/LinkGeneratorConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/config/LinkGeneratorConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/SpotifySearcherConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/SpotifySearcherConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/AgnosticLinkGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/AgnosticMusicEntityGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/ExternalGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/ExternalTrackedUrlGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/FullGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/MusicEntityConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/Searcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/SearcherConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/rest/LinkReturnerRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/rest/LinkReturnerRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator_UnitTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/echoic/linkgenerator/core/interfaces/SearcherConverter_Track_UnitTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator_UnitTests.class" beforeDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,9 +178,9 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
