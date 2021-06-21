@@ -117,10 +117,10 @@ public class LinkGeneratorConfig
 
 
 
-    @Bean
+    /*@Bean
     public UrlTracker trackedUrl(RestTemplate restTemplate)
     {
         return new UrlTracker(restTemplate);
-    }
+    }*/
 
 }

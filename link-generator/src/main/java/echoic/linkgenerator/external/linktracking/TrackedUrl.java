@@ -39,7 +39,7 @@ public class TrackedUrl
         headers.set("Authorization", "Basic "+base64Creds);
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>("{\"urls\": [{\"long_url\": \"" + url + "\"}]}", headers);
-        ResponseEntity<TrackedUrlHeader> trackedUrls = restTemplate.postForEntity("https://tiny.cc/tiny/api/3/urls",
+        ResponseEntity<TrackedUrlHeader> trackedUrls = restTemplate.postForEntity("https://tinycc.com/tiny/api/3/urls",
                 request,
                 TrackedUrlHeader.class);
         TrackedUrlHeader trackedUrlHeader = trackedUrls.getBody();

@@ -29,11 +29,11 @@ public class UrlTracker
     {
         HttpHeaders headers = new HttpHeaders();
 
-        String base64Creds = Base64.getEncoder().encodeToString("thami:1280acc1-86b5-4bda-99bc-4a49dbb77813".getBytes());
+        String base64Creds = Base64.getEncoder().encodeToString("echoic:d246f013-d216-42ef-bc18-ea33cc24c6e8".getBytes());
         headers.set("Authorization", "Basic "+base64Creds);
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>(headers);
-        ResponseEntity<TrackedUrlHeader> trackedUrlResponse = restTemplate.exchange("https://tiny.cc/tiny/api/3/urls",
+        ResponseEntity<TrackedUrlHeader> trackedUrlResponse = restTemplate.exchange("https://tinycc.com/tiny/api/3/urls",
                 HttpMethod.GET,
                 request,
                 TrackedUrlHeader.class);
