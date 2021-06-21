@@ -15,6 +15,7 @@ import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.event.annotation.BeforeTestMethod;
 
 import java.util.Optional;
 
@@ -89,12 +90,13 @@ public class SearcherConverter_IntegrationTests
     }
 
     @Test
-    @DisplayName("convertToMusicEntity (Successful)")
+    @DisplayName("convertToMusicEntity (Successful) ")
     void convertToMusicEntity_Successful()
     {
-        assertNotNull(TRACK, "getSearchResult_Successful() was not run before");
+        Track track = searcherConverter.getSearchResult("cherish the day robert glasper").orElseThrow();
+        assertNotNull(track, "getSearchResult_Successful() was not run before");
 
-        MusicEntity musicEntity = searcherConverter.convertToMusicEntity(TRACK, agnosticMusicEntityGenerator, trackedUrlGenerator);
+        MusicEntity musicEntity = searcherConverter.convertToMusicEntity(track, agnosticMusicEntityGenerator, trackedUrlGenerator);
         assertAll(
                 () -> assertEquals(musicEntity.getSongName(), FIRST_SONG),
                 () -> assertEquals(musicEntity.getAlbumName(), FIRST_ALBUM),
@@ -110,7 +112,6 @@ public class SearcherConverter_IntegrationTests
     @DisplayName("convertToMusicEntity (Unsuccessful)")
     void convertToMusicEntity_TrackNullUnsuccessful()
     {
-
         assertThrows(Exception.class, () -> searcherConverter.convertToMusicEntity(null, agnosticMusicEntityGenerator,
                 trackedUrlGenerator), "Track cannot be null");
     }
