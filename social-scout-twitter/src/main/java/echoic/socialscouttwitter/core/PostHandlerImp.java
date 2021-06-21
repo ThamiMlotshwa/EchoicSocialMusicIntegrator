@@ -35,7 +35,7 @@ public class PostHandlerImp implements PostHandler
             try
             {
                 String searchString = queryTokenizer.getSearchString(incomingPost.getText());
-                if (searchString != null)
+                if (searchString != null && !searchString.isEmpty())
                 {
                     Optional<MusicEntity> optionalSong = musicEntityGenerator.getMusicEntity(searchString);
                     if (optionalSong.isPresent())

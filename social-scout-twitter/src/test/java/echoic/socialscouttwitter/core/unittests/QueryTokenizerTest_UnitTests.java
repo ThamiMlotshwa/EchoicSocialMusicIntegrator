@@ -1,5 +1,6 @@
-package echoic.socialscouttwitter.core;
+package echoic.socialscouttwitter.core.unittests;
 
+import echoic.socialscouttwitter.core.TokenizationException;
 import echoic.socialscouttwitter.core.interfaces.QueryTokenizer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -8,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QueryTokenizerTest {
+class QueryTokenizerTest_UnitTests {
 
     @Autowired
     QueryTokenizer queryTokenizer;

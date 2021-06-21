@@ -1,5 +1,6 @@
-package echoic.socialscouttwitter.core;
+package echoic.socialscouttwitter.core.unittests;
 
+import echoic.socialscouttwitter.core.MusicEntity;
 import echoic.socialscouttwitter.core.interfaces.MusicEntityGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,7 +20,7 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
-class MusicEntityGeneratorTest
+class MusicEntityGenerator_UnitTests
 {
     @Autowired
     MusicEntityGenerator musicEntityGenerator;

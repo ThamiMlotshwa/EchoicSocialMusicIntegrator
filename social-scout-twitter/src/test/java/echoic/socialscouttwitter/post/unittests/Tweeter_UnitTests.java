@@ -1,4 +1,4 @@
-package echoic.socialscouttwitter.post;
+package echoic.socialscouttwitter.post.unittests;
 
 import echoic.socialscouttwitter.core.MusicEntity;
 import echoic.socialscouttwitter.post.interfaces.Tweeter;
@@ -17,7 +17,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
-class TweeterTest {
+class Tweeter_UnitTests {
 
     @Autowired
     Tweeter tweeter;
