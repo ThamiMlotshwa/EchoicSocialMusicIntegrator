@@ -39,7 +39,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   tests:
-    name: Unit tests
+    name: Unit & Integration Tests
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
