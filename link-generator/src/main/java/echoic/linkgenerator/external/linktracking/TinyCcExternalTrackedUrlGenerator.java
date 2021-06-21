@@ -10,7 +10,7 @@ import java.util.Optional;
 @Slf4j
 public class TinyCcExternalTrackedUrlGenerator implements ExternalTrackedUrlGenerator
 {
-    public static final String HOST = "https://tiny.cc/tiny/api/3/";
+    public static final String HOST = "https://tinycc.com/tiny/api/3/";
     public static final String HOST_NAME = "TinyCC";
 
 
