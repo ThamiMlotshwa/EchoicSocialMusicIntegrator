@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/workflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/workflow.yml" afterDir="false" />
-    </list>
+    <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

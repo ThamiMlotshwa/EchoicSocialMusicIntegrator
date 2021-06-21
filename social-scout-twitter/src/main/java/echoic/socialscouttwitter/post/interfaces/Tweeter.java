@@ -11,4 +11,5 @@ public interface Tweeter {
     Optional<Status> replyWithTokenizationProblem(Status incomingPost);
 
     Optional<Status> replyWithUnavailable(Status incomingPost);
+    
 }
