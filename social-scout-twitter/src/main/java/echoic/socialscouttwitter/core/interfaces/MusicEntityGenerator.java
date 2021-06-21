@@ -1,4 +1,6 @@
-package echoic.socialscouttwitter.core;
+package echoic.socialscouttwitter.core.interfaces;
+
+import echoic.socialscouttwitter.core.MusicEntity;
 
 import java.util.Optional;
 

@@ -1,9 +1,8 @@
 package echoic.socialscouttwitter.post;
 
 import echoic.socialscouttwitter.core.MusicEntity;
-import org.aspectj.lang.annotation.Before;
+import echoic.socialscouttwitter.post.interfaces.Tweeter;
 import org.junit.jupiter.api.*;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -14,7 +13,6 @@ import twitter4j.TwitterException;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -44,8 +42,9 @@ class TweeterTest {
 
         when(mockIncomingStatus.getUser().getScreenName()).thenReturn("User");
         when(mockIncomingStatus.getId()).thenReturn(1L);
-
     }
+
+    // Only replyWithLink is tested, as the functional units for the other two methods are the same
 
     @Test
     @DisplayName("replyWithLink (Successful)")
@@ -59,20 +58,23 @@ class TweeterTest {
     }
 
     @Test
-    @DisplayName("replyWithLink (Unsuccessful)")
+    @DisplayName("replyWithLink (NullUnsuccessful)")
     void replyWithLink_NullUnsuccessful() throws TwitterException
     {
-        when(mockOutgoingStatus.getText().contains(musicEntity.getLink())).thenReturn(true);
         when(mockTwitter.updateStatus(any(StatusUpdate.class))).thenReturn(mockOutgoingStatus);
         Optional<Status> optional = tweeter.replyWithLink(null, musicEntity);
+        Assertions.assertFalse(optional.isPresent());
+
+        optional = tweeter.replyWithLink(mockIncomingStatus, null);
         Assertions.assertFalse(optional.isPresent());
     }
 
     @Test
-    void replyWithTokenizationProblem() {
-    }
-
-    @Test
-    void replyWithUnavailable() {
+    @DisplayName("replyWithLink (Exception Unsuccessful)")
+    void replyWithLink_ExceptionUnsuccessful() throws TwitterException
+    {
+        when(mockTwitter.updateStatus(any(StatusUpdate.class))).thenThrow(TwitterException.class);
+        Optional<Status> optional = tweeter.replyWithLink(mockIncomingStatus, musicEntity);
+        Assertions.assertFalse(optional.isPresent());
     }
 }

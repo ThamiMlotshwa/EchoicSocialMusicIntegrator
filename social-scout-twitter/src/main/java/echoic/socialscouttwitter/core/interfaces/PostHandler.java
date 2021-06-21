@@ -1,4 +1,4 @@
-package echoic.socialscouttwitter.core;
+package echoic.socialscouttwitter.core.interfaces;
 
 import twitter4j.Status;
 

@@ -1,7 +1,10 @@
 package echoic.socialscouttwitter.config;
 
 import echoic.socialscouttwitter.core.*;
-import echoic.socialscouttwitter.post.Tweeter;
+import echoic.socialscouttwitter.core.interfaces.MusicEntityGenerator;
+import echoic.socialscouttwitter.core.interfaces.PostHandler;
+import echoic.socialscouttwitter.core.interfaces.QueryTokenizer;
+import echoic.socialscouttwitter.post.interfaces.Tweeter;
 import echoic.socialscouttwitter.post.TweeterImp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

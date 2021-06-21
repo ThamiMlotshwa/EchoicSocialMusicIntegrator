@@ -1,6 +1,7 @@
 package echoic.socialscouttwitter.post;
 
 import echoic.socialscouttwitter.core.MusicEntity;
+import echoic.socialscouttwitter.post.interfaces.Tweeter;
 import lombok.extern.slf4j.Slf4j;
 import twitter4j.Status;
 import twitter4j.StatusUpdate;
@@ -44,6 +45,12 @@ public class TweeterImp implements Tweeter {
     @Override
     public Optional<Status> replyWithLink(Status incomingPost, MusicEntity song)
     {
+        if (incomingPost == null || song == null)
+        {
+            log.warn("incomingPost or song null");
+            return Optional.empty();
+        }
+
         String details = "@" + incomingPost.getUser().getScreenName() +"\n" +
                          "Title: " + song.getSongName() +"\n" +
                          "Artist: " + song.getArtistName() +"\n" +
@@ -56,6 +63,9 @@ public class TweeterImp implements Tweeter {
     @Override
     public Optional<Status> replyWithTokenizationProblem(Status incomingPost)
     {
+        if (incomingPost == null)
+            return Optional.empty();
+
         String details = "@" + incomingPost.getUser().getScreenName() +"\n" +
                          "Your tweet is not correctly formatted. Please review and try again.";
 
@@ -65,6 +75,9 @@ public class TweeterImp implements Tweeter {
     @Override
     public Optional<Status> replyWithUnavailable(Status incomingPost)
     {
+        if (incomingPost == null)
+            return Optional.empty();
+
         String details = "@" + incomingPost.getUser().getScreenName() +"\n" +
                         "The Echoic server is either unavailable or the song " +
                         "could not be found. Please try again later or with a " +
@@ -76,7 +89,6 @@ public class TweeterImp implements Tweeter {
 
     private Status sendTweet(String details, Status incomingPost)
     {
-        if (incomingPost == null){ return null; }
         StatusUpdate response = new StatusUpdate(details);
         long tweetId = incomingPost.getId();
         response.inReplyToStatusId(tweetId);

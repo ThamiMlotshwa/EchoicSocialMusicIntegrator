@@ -1,4 +1,4 @@
-package echoic.socialscouttwitter.post;
+package echoic.socialscouttwitter.post.interfaces;
 
 import echoic.socialscouttwitter.core.MusicEntity;
 import twitter4j.Status;

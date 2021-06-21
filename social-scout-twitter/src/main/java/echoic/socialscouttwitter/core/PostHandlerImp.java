@@ -1,7 +1,10 @@
 package echoic.socialscouttwitter.core;
 
 
-import echoic.socialscouttwitter.post.Tweeter;
+import echoic.socialscouttwitter.core.interfaces.MusicEntityGenerator;
+import echoic.socialscouttwitter.core.interfaces.PostHandler;
+import echoic.socialscouttwitter.core.interfaces.QueryTokenizer;
+import echoic.socialscouttwitter.post.interfaces.Tweeter;
 import lombok.extern.slf4j.Slf4j;
 import twitter4j.Status;
 

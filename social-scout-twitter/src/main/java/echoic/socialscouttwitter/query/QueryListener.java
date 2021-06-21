@@ -1,17 +1,11 @@
 package echoic.socialscouttwitter.query;
 
-import echoic.socialscouttwitter.core.PostHandler;
-import echoic.socialscouttwitter.core.SearchExtractor;
-import echoic.socialscouttwitter.core.MusicEntity;
-import echoic.socialscouttwitter.core.TokenizationException;
-import echoic.socialscouttwitter.post.Tweeter;
+import echoic.socialscouttwitter.core.interfaces.PostHandler;
+import echoic.socialscouttwitter.post.interfaces.Tweeter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import twitter4j.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Component
 @Slf4j
