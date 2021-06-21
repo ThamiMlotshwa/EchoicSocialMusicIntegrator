@@ -26,7 +26,7 @@ public class TrackedUrl
     String shortUrl;
 
     @JsonProperty("total_clicks")
-    String totalClicks;
+    Long totalClicks;
 
     @JsonProperty("error")
     LinkError linkError;

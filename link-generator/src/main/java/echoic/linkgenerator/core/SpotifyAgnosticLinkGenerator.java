@@ -64,7 +64,7 @@ public class SpotifyAgnosticLinkGenerator implements AgnosticLinkGenerator
         MusicEntity musicEntity = null;
         Track track = (Track) searcherConverter.getSearchResult(searchTerm).orElseThrow();
         musicEntity = searcherConverter.convertToMusicEntity(track, agnosticMusicEntityGenerator, trackedUrlGenerator);
-
+        //musicEntity = musicEntityRepo.save(musicEntity);
         return musicEntity;
     }
     /*

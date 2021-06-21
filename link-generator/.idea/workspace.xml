@@ -5,43 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifySearcherConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/UrlTracker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/AgnosticMusicEntityGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/ExternalTrackedUrlGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/FullGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/MusicEntityConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/Searcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/SearcherConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/interfaces/ExternalAgnosticMusicEntityGenerator_UnitTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/interfaces/SearcherConverter_UnitTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/echoic/linkgenerator/core/interfaces/TrackedUrlGenerator_UnitTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../social-scout-twitter/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/AppleSpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/AppleAgnosticLinkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkGeneratorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/config/LinkGeneratorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/LinkReturnerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/rest/LinkReturnerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/MusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/MusicEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/SpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/interfaces/AgnosticLinkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/SpotifySpecificGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/ExternalMusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/ExternalAgnosticMusicEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/core/SpotifyAgnosticLinkGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TrackedUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/linktracking/TrackedUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/repos/mongo/MusicEntityRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/repos/mongo/MusicEntityRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/AppleSpecificGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkGeneratorConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/LinkReturnerRestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/MusicEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/SpecificGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/SpotifySpecificGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/ExternalMusicEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TinyCcExternalTrackedUrlGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TrackedUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/linktracking/TrackedUrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/repos/mongo/MusicEntityRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/repos/mongo/MusicEntityRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/QueryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/QueryListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/SocialScoutConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/src/main/java/echoic/socialscouttwitter/SocialScoutConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/QueryListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SocialScoutConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../social-scout-twitter/target/classes/echoic/socialscouttwitter/SocialScoutConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/echoic/linkgenerator/external/musicentity/SonglinkExtAgnosticMusicEntityGenerator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +28,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -69,23 +45,32 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../social-scout-twitter" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="echoic.linkgenerator.core" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="echoic.linkgenerator.core.interfaces" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SearcherConverter_Track_UnitTests">
     <configuration name="LinkGeneratorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.LinkGeneratorApplication" />
       <module name="link-generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
+          <option name="PATTERN" value="echoic.linkgenerator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,9 +78,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearcherConverter_Track_UnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.interfaces.SearcherConverter_Track_UnitTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearcherConverter_Track_UnitTests.convertToMusicEntity_Successful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.interfaces.SearcherConverter_Track_UnitTests" />
+      <option name="METHOD_NAME" value="convertToMusicEntity_Successful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearcherConverter_Track_UnitTests.getSearchResult_Successful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.interfaces.SearcherConverter_Track_UnitTests" />
+      <option name="METHOD_NAME" value="getSearchResult_Successful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrackedUrlGenerator_UnitTests.getTrackedUrl_ErrorCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.interfaces" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.interfaces.TrackedUrlGenerator_UnitTests" />
+      <option name="METHOD_NAME" value="getTrackedUrl_ErrorCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearcherConverter_Track_UnitTests" />
+        <item itemvalue="JUnit.SearcherConverter_Track_UnitTests.convertToMusicEntity_Successful" />
+        <item itemvalue="JUnit.SearcherConverter_Track_UnitTests.getSearchResult_Successful" />
         <item itemvalue="Application.LinkGeneratorApplication" />
+        <item itemvalue="JUnit.TrackedUrlGenerator_UnitTests.getTrackedUrl_ErrorCode" />
       </list>
     </recent_temporary>
   </component>

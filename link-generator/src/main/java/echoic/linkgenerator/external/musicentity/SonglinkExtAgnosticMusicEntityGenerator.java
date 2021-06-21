@@ -2,6 +2,7 @@ package echoic.linkgenerator.external.musicentity;
 
 import echoic.linkgenerator.core.interfaces.ExternalAgnosticMusicEntityGenerator;
 import echoic.linkgenerator.external.ExternalAgnosticMusicEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -28,7 +29,7 @@ public class SonglinkExtAgnosticMusicEntityGenerator implements ExternalAgnostic
         ResponseEntity<ExternalAgnosticMusicEntity> responseEntity = restTemplate.getForEntity("https://api.song.link/v1-alpha.1/links?url={link}",
                 ExternalAgnosticMusicEntity.class,
                 url);
-        if (responseEntity.hasBody()) {
+        if (responseEntity.hasBody() && responseEntity.getStatusCodeValue() == HttpStatus.OK.value()) {
             externalAgnosticMusicEntity = responseEntity.getBody();
         }
 
