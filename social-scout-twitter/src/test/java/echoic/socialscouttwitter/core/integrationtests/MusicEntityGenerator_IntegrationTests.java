@@ -2,10 +2,7 @@ package echoic.socialscouttwitter.core.integrationtests;
 
 import echoic.socialscouttwitter.core.MusicEntity;
 import echoic.socialscouttwitter.core.interfaces.MusicEntityGenerator;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,6 +16,7 @@ import java.util.Optional;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
+@Disabled("Must containerize for CI")
 @SpringBootTest
 class MusicEntityGenerator_IntegrationTests
 {
