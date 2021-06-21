@@ -9,6 +9,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+import org.junit.jupiter.api.Disabled;
 
 import java.util.Map;
 import java.util.Optional;
@@ -35,8 +36,9 @@ class MusicEntityGenerator_IntegrationTests
         musicEntity.setAlbumName("Discovery");
         musicEntity.setArtistName("Daft Punk");
     }
-
+    /*
     // Requires LinkGenerator to be running
+    @Disabled("Must containerize for CI")
     @Test
     @DisplayName("findById (Real song 1)")
     void testGetMusicEntity_Successful()
@@ -50,6 +52,7 @@ class MusicEntityGenerator_IntegrationTests
         Assertions.assertEquals(newMusicEntity.getArtistName(), musicEntity.getArtistName());
     }
 
+    @Disabled("Must containerize for CI")
     @Test
     @DisplayName("findById (Real song 2)")
     void testGetMusicEntity_BackwardsSuccessful()
@@ -63,6 +66,7 @@ class MusicEntityGenerator_IntegrationTests
         Assertions.assertEquals(newMusicEntity.getArtistName(), musicEntity.getArtistName());
     }
 
+    @Disabled("Must containerize for CI")
     @Test
     @DisplayName("findById (Real song 3)")
     void testGetMusicEntity_AltSuccessful()
@@ -74,8 +78,9 @@ class MusicEntityGenerator_IntegrationTests
         Assertions.assertEquals(newMusicEntity.getSongName(), musicEntity.getSongName());
         Assertions.assertEquals(newMusicEntity.getAlbumName(), musicEntity.getAlbumName());
         Assertions.assertEquals(newMusicEntity.getArtistName(), musicEntity.getArtistName());
-    }
+    }*/
 
+    @Disabled("Must containerize for CI")
     @Test
     @DisplayName("findById (Spelling error)")
     void testGetMusicEntity_SpellingUnsuccessful()
@@ -84,6 +89,7 @@ class MusicEntityGenerator_IntegrationTests
                 .getMusicEntity("Daft Punk - Verdis Quo"));
     }
 
+    @Disabled("Must containerize for CI")
     @Test
     @DisplayName("findById (Non-existent song)")
     void testGetMusicEntity_NonExistentUnsuccessful()
