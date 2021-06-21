@@ -1,33 +1,15 @@
 package echoic.linkgenerator.core;
 
-import com.neovisionaries.i18n.CountryCode;
 import com.wrapper.spotify.SpotifyApi;
-import com.wrapper.spotify.exceptions.SpotifyWebApiException;
-import com.wrapper.spotify.model_objects.specification.Paging;
 import com.wrapper.spotify.model_objects.specification.Track;
-import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
-import echoic.linkgenerator.core.interfaces.*;
-import echoic.linkgenerator.external.ExternalAgnosticMusicEntity;
-import echoic.linkgenerator.external.linktracking.TinyCcExternalTrackedUrlGenerator;
-import echoic.linkgenerator.external.linktracking.TrackedUrl;
-import echoic.linkgenerator.external.linktracking.TrackedUrlHeader;
-import echoic.linkgenerator.external.musicentity.SonglinkExtAgnosticMusicEntityGenerator;
+import echoic.linkgenerator.core.unittests.*;
 import echoic.linkgenerator.repos.mongo.MusicEntityRepo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.hc.core5.http.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.IOException;
-import java.util.Base64;
-import java.util.Optional;
 
 @Component
 @Slf4j
@@ -64,7 +46,7 @@ public class SpotifyAgnosticLinkGenerator implements AgnosticLinkGenerator
         MusicEntity musicEntity = null;
         Track track = (Track) searcherConverter.getSearchResult(searchTerm).orElseThrow();
         musicEntity = searcherConverter.convertToMusicEntity(track, agnosticMusicEntityGenerator, trackedUrlGenerator);
-
+        //musicEntity = musicEntityRepo.save(musicEntity);
         return musicEntity;
     }
     /*

@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72aecd53-817f-42b6-83bd-73769cbf8e96" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +12,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1tZaHmSVg4cXHli3YeiQewIt9oh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -31,23 +39,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../social-scout-twitter" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="echoic.linkgenerator.core" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="echoic.linkgenerator.core.unittests" />
+      <recent name="echoic.linkgenerator.core.interfaces" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SearcherConverter_IntegrationTests">
     <configuration name="LinkGeneratorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.LinkGeneratorApplication" />
       <module name="link-generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="echoic.linkgenerator.core.interfaces.*" />
+          <option name="PATTERN" value="echoic.linkgenerator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,8 +73,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearcherConverter_IntegrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.integrationtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.integrationtests.SearcherConverter_IntegrationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearcherConverter_IntegrationTests.convertToMusicEntity_TrackNullUnsuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.integrationtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.integrationtests.SearcherConverter_IntegrationTests" />
+      <option name="METHOD_NAME" value="convertToMusicEntity_TrackNullUnsuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearcherConverter_IntegrationTests.getSearchResult_NonExistentSong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.integrationtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.integrationtests.SearcherConverter_IntegrationTests" />
+      <option name="METHOD_NAME" value="getSearchResult_NonExistentSong" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearcherConverter_IntegrationTests.getSearchResult_Successful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="link-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="echoic.linkgenerator.core.integrationtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="echoic.linkgenerator.core.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="echoic.linkgenerator.core.integrationtests.SearcherConverter_IntegrationTests" />
+      <option name="METHOD_NAME" value="getSearchResult_Successful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearcherConverter_IntegrationTests" />
+        <item itemvalue="JUnit.SearcherConverter_IntegrationTests.convertToMusicEntity_TrackNullUnsuccessful" />
+        <item itemvalue="JUnit.SearcherConverter_IntegrationTests.getSearchResult_NonExistentSong" />
+        <item itemvalue="JUnit.SearcherConverter_IntegrationTests.getSearchResult_Successful" />
         <item itemvalue="Application.LinkGeneratorApplication" />
       </list>
     </recent_temporary>

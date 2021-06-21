@@ -1,4 +1,4 @@
-package echoic.linkgenerator.core.interfaces;
+package echoic.linkgenerator.core.unittests;
 
 import java.util.Optional;
 

@@ -1,8 +1,8 @@
 package echoic.linkgenerator.rest;
 
-import echoic.linkgenerator.core.interfaces.AgnosticLinkGenerator;
+import echoic.linkgenerator.core.unittests.AgnosticLinkGenerator;
 import echoic.linkgenerator.core.MusicEntity;
-import echoic.linkgenerator.core.interfaces.SearcherConverter;
+import echoic.linkgenerator.core.unittests.SearcherConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;

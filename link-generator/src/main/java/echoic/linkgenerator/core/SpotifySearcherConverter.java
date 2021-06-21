@@ -6,7 +6,7 @@ import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.model_objects.specification.Paging;
 import com.wrapper.spotify.model_objects.specification.Track;
 import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
-import echoic.linkgenerator.core.interfaces.*;
+import echoic.linkgenerator.core.unittests.*;
 import echoic.linkgenerator.external.ExternalAgnosticMusicEntity;
 import echoic.linkgenerator.external.linktracking.TrackedUrl;
 import lombok.extern.slf4j.Slf4j;

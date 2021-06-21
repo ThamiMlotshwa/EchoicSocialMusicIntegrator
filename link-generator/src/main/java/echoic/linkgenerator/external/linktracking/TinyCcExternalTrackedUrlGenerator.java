@@ -1,19 +1,18 @@
 package echoic.linkgenerator.external.linktracking;
 
-import echoic.linkgenerator.core.interfaces.ExternalTrackedUrlGenerator;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import echoic.linkgenerator.core.unittests.ExternalTrackedUrlGenerator;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Base64;
 import java.util.Optional;
 
+@Slf4j
 public class TinyCcExternalTrackedUrlGenerator implements ExternalTrackedUrlGenerator
 {
     public static final String HOST = "https://tiny.cc/tiny/api/3/";
     public static final String HOST_NAME = "TinyCC";
+
 
     private RestTemplate restTemplate;
     private String credentials;
@@ -31,19 +30,24 @@ public class TinyCcExternalTrackedUrlGenerator implements ExternalTrackedUrlGene
 
         HttpHeaders headers = new HttpHeaders();
 
-        // put this in the config
-        String base64Creds = Base64.getEncoder().encodeToString("thami:1280acc1-86b5-4bda-99bc-4a49dbb77813".getBytes());
-
-        headers.set("Authorization", "Basic "+base64Creds);
+        headers.set("Authorization", "Basic " + credentials);
         headers.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<String> request = new HttpEntity<>("{\"urls\": [{\"long_url\": \"" + url + "\"}]}", headers);
+        HttpEntity<String> request = new HttpEntity<>(getJsonPostBody(url), headers);
         ResponseEntity<TrackedUrlHeader> responseEntity = restTemplate.postForEntity(HOST +"urls",
                 request,
                 TrackedUrlHeader.class);
-        if (responseEntity.hasBody())
+        if (responseEntity.hasBody() && responseEntity.getStatusCodeValue() == HttpStatus.OK.value())
         {
             TrackedUrlHeader trackedUrlHeader = responseEntity.getBody();
-            trackedUrl = trackedUrlHeader.getUrls().get(0);
+            TrackedUrl temp = trackedUrlHeader.getUrls().get(0);
+            if (temp.linkError.getCode() == 0)
+                trackedUrl = trackedUrlHeader.getUrls().get(0);
+            else
+                {
+                log.info("Error with generating TinyCC TrackedLink [code :" + temp.linkError.getCode() +
+                        ", message:  " + temp.linkError.getMessage() +
+                        ", details: " + temp.linkError.details + "]");
+            }
         }
 
         return Optional.ofNullable(trackedUrl);
@@ -52,5 +56,10 @@ public class TinyCcExternalTrackedUrlGenerator implements ExternalTrackedUrlGene
     @Override
     public String getGeneratorHost() {
         return null;
+    }
+
+    private String getJsonPostBody(String url)
+    {
+        return "{\"urls\": [{\"long_url\": \"" + url + "\"}]}";
     }
 }
