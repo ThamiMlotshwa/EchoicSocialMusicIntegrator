@@ -11,15 +11,21 @@ on:
                 - 'Link_Generator-/**'
                 - 'Social_Scout-/**'
 jobs:
-    tests:
-        runs-on: windows-latest
-        steps:
-            - uses: actions/checkout@v2
-            - name: Set up JDK
-                uses: actions/setup-java@v1
-                with:
-                    java-version: '11'
-            - name: Build with Maven
-              run: mvn -B package --file pom.xml
-            - name: Test with Maven
-              run: mvn -B test --file pom.xml
+  #Test's job
+  tests:
+    name: Unit tests
+    #Run on Ubuntu using the latest version
+    runs-on: windows-latest
+    #Job's steps
+    steps:
+      #Check-out your repository under $GITHUB_WORKSPACE, so your workflow can access it
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      #Set up Maven cache
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+      - name: Test with Maven
+        run: mvn -B test --file pom.xml
