@@ -1,11 +1,10 @@
 package echoic.linkgenerator.external.linktracking;
 
-import echoic.linkgenerator.core.interfaces.ExternalTrackedUrlGenerator;
+import echoic.linkgenerator.core.unittests.ExternalTrackedUrlGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Base64;
 import java.util.Optional;
 
 @Slf4j
