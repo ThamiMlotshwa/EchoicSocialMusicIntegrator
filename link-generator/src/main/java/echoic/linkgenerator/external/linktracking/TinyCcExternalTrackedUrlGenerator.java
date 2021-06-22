@@ -16,11 +16,13 @@ public class TinyCcExternalTrackedUrlGenerator implements ExternalTrackedUrlGene
 
     private RestTemplate restTemplate;
     private String credentials;
+    private String tinyCcUrl;
 
-    public TinyCcExternalTrackedUrlGenerator(RestTemplate restTemplate, String credentials)
+    public TinyCcExternalTrackedUrlGenerator(RestTemplate restTemplate, String tinyCcUrl, String credentials)
     {
         this.restTemplate = restTemplate;
         this.credentials = credentials;
+        this.tinyCcUrl = tinyCcUrl;
     }
 
     @Override
@@ -33,7 +35,8 @@ public class TinyCcExternalTrackedUrlGenerator implements ExternalTrackedUrlGene
         headers.set("Authorization", "Basic " + credentials);
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>(getJsonPostBody(url), headers);
-        ResponseEntity<TrackedUrlHeader> responseEntity = restTemplate.postForEntity(HOST +"urls",
+        ResponseEntity<TrackedUrlHeader> responseEntity = restTemplate.postForEntity(
+                tinyCcUrl +"tiny/api/3/urls",
                 request,
                 TrackedUrlHeader.class);
         if (responseEntity.hasBody() && responseEntity.getStatusCodeValue() == HttpStatus.OK.value())

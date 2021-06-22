@@ -44,6 +44,9 @@ public class LinkGeneratorConfig
     @Value("${tinycc.key}")
     private String tinyCcKey;
 
+    @Value("${tinycc.url}")
+    private String tinyCcUrl;
+
 
     @Bean
     public SpotifyApi spotifyApi() throws IOException, SpotifyWebApiException, ParseException {
@@ -100,7 +103,7 @@ public class LinkGeneratorConfig
     public ExternalTrackedUrlGenerator externalTrackedUrlGenerator(RestTemplate restTemplate)
     {
         String base64Creds = Base64.getEncoder().encodeToString((tinyCcUser + ":" + tinyCcKey).getBytes());
-        return new TinyCcExternalTrackedUrlGenerator(restTemplate, base64Creds);
+        return new TinyCcExternalTrackedUrlGenerator(restTemplate, tinyCcUrl, base64Creds);
     }
 
     @Bean
@@ -109,18 +112,11 @@ public class LinkGeneratorConfig
         return new RestTemplateBuilder().build();
     }
 
-    /*@Bean
-    public AgnosticLinkGenerator specificGenerator()
-    {
-        return new AppleAgnosticLinkGenerator(restTemplate());
-    }*/
-
-
-
-    /*@Bean
+    @Bean
     public UrlTracker trackedUrl(RestTemplate restTemplate)
     {
-        return new UrlTracker(restTemplate);
-    }*/
+        String base64Creds2 = Base64.getEncoder().encodeToString((tinyCcUser + ":" + tinyCcKey).getBytes());
+        return new UrlTracker(restTemplate, tinyCcUrl, base64Creds2);
+    }
 
 }

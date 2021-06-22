@@ -13,31 +13,35 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Base64;
 import java.util.List;
 
-@Component
 public class UrlTracker
 {
     private RestTemplate restTemplate;
+    private String url;
+    private String credentials;
 
-    public UrlTracker(RestTemplate restTemplate)
+    public UrlTracker(RestTemplate restTemplate, String url, String credentials)
     {
         this.restTemplate = restTemplate;
+        this.url = url;
+        this.credentials = credentials;
     }
 
     @Transactional(propagation = Propagation.REQUIRED)
-    @Scheduled(fixedRate = 300000, initialDelay = 30000)
+    @Scheduled(fixedRate = 21600000, initialDelay = 30000) // 6 hour intervals
     public void updateClicks()
     {
         HttpHeaders headers = new HttpHeaders();
 
-        String base64Creds = Base64.getEncoder().encodeToString("echoic:d246f013-d216-42ef-bc18-ea33cc24c6e8".getBytes());
-        headers.set("Authorization", "Basic "+base64Creds);
+        headers.set("Authorization", "Basic "+credentials);
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>(headers);
-        ResponseEntity<TrackedUrlHeader> trackedUrlResponse = restTemplate.exchange("https://tinycc.com/tiny/api/3/urls",
+        ResponseEntity<TrackedUrlHeader> trackedUrlResponse = restTemplate.exchange(
+                url + "tiny/api/3/urls",
                 HttpMethod.GET,
                 request,
                 TrackedUrlHeader.class);
         TrackedUrlHeader trackedUrlHeader = trackedUrlResponse.getBody();
         List<TrackedUrl> trackedUrls = trackedUrlHeader.getUrls();
+
     }
 }
