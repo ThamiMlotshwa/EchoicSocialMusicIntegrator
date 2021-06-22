@@ -14,11 +14,13 @@ import java.util.Optional;
 public class MusicEntityGeneratorImpl implements MusicEntityGenerator
 {
 
-    public RestTemplate restTemplate;
+    private RestTemplate restTemplate;
+    private String linkGeneratorUrl;
 
-    public MusicEntityGeneratorImpl(RestTemplate restTemplate)
+    public MusicEntityGeneratorImpl(RestTemplate restTemplate, String linkGeneratorUrl)
     {
         this.restTemplate = restTemplate;
+        this.linkGeneratorUrl = linkGeneratorUrl;
     }
 
     @Override

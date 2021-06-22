@@ -9,3 +9,14 @@ twitter:
 
   listenerFlag: echoicmusic
 
+linkgenerator:
+  url: http://localhost:8081/
+
+---
+
+spring:
+  profile: prod
+
+linkgenerator:
+  url: https://echoic-linkgenerator.herokuapp.com/
+

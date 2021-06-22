@@ -27,6 +27,8 @@ public class SocialScoutConfig
     private String accessTokenSecret;
     @Value("${twitter.listenerFlag}")
     private String listenerFlag;
+    @Value("${linkgenerator.url}")
+    private String linkGeneratorUrl;
 
     @Bean
     public Twitter twitter()
@@ -78,7 +80,7 @@ public class SocialScoutConfig
     @Bean
     MusicEntityGenerator musicEntityGenerator(RestTemplate restTemplate)
     {
-        return new MusicEntityGeneratorImpl(restTemplate);
+        return new MusicEntityGeneratorImpl(restTemplate, linkGeneratorUrl);
     }
 
     @Bean
