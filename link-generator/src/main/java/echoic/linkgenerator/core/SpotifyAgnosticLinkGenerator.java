@@ -2,7 +2,7 @@ package echoic.linkgenerator.core;
 
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.model_objects.specification.Track;
-import echoic.linkgenerator.core.unittests.*;
+import echoic.linkgenerator.core.interfaces.*;
 import echoic.linkgenerator.repos.mongo.MusicEntityRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +46,7 @@ public class SpotifyAgnosticLinkGenerator implements AgnosticLinkGenerator
         MusicEntity musicEntity = null;
         Track track = (Track) searcherConverter.getSearchResult(searchTerm).orElseThrow();
         musicEntity = searcherConverter.convertToMusicEntity(track, agnosticMusicEntityGenerator, trackedUrlGenerator);
-        musicEntity = musicEntityRepo.save(musicEntity);
+        //musicEntity = musicEntityRepo.save(musicEntity);
         return musicEntity;
     }
     /*

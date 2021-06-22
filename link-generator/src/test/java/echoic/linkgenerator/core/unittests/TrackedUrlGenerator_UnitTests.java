@@ -1,5 +1,6 @@
 package echoic.linkgenerator.core.unittests;
 
+import echoic.linkgenerator.core.interfaces.ExternalTrackedUrlGenerator;
 import echoic.linkgenerator.external.linktracking.LinkError;
 import echoic.linkgenerator.external.linktracking.TrackedUrl;
 import echoic.linkgenerator.external.linktracking.TrackedUrlHeader;

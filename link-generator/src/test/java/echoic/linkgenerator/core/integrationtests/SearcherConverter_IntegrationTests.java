@@ -1,27 +1,19 @@
 package echoic.linkgenerator.core.integrationtests;
 
 import com.wrapper.spotify.SpotifyApi;
-import com.wrapper.spotify.model_objects.specification.Paging;
 import com.wrapper.spotify.model_objects.specification.Track;
 import com.wrapper.spotify.requests.authorization.client_credentials.ClientCredentialsRequest;
-import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
 import echoic.linkgenerator.core.MusicEntity;
-import echoic.linkgenerator.core.unittests.ExternalAgnosticMusicEntityGenerator;
-import echoic.linkgenerator.core.unittests.ExternalTrackedUrlGenerator;
-import echoic.linkgenerator.core.unittests.SearcherConverter;
-import echoic.linkgenerator.external.ExternalAgnosticMusicEntity;
-import echoic.linkgenerator.external.linktracking.TrackedUrl;
+import echoic.linkgenerator.core.interfaces.ExternalAgnosticMusicEntityGenerator;
+import echoic.linkgenerator.core.interfaces.ExternalTrackedUrlGenerator;
+import echoic.linkgenerator.core.interfaces.SearcherConverter;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.event.annotation.BeforeTestMethod;
 
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.*;
 
 @SpringBootTest
 
