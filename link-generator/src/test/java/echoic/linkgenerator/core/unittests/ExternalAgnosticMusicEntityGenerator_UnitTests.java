@@ -1,5 +1,6 @@
 package echoic.linkgenerator.core.unittests;
 
+import echoic.linkgenerator.core.interfaces.ExternalAgnosticMusicEntityGenerator;
 import echoic.linkgenerator.external.ExternalAgnosticMusicEntity;
 import echoic.linkgenerator.external.Platforms;
 import org.junit.jupiter.api.BeforeAll;

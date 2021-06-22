@@ -1,4 +1,4 @@
-package echoic.linkgenerator.core.unittests;
+package echoic.linkgenerator.core.interfaces;
 
 import echoic.linkgenerator.external.linktracking.TrackedUrl;
 

@@ -1,4 +1,4 @@
-package echoic.linkgenerator.core.unittests;
+package echoic.linkgenerator.core.interfaces;
 
 public interface ExternalGenerator
 {

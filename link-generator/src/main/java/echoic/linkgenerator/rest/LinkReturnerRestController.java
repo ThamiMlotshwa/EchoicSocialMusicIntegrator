@@ -1,8 +1,8 @@
 package echoic.linkgenerator.rest;
 
-import echoic.linkgenerator.core.unittests.AgnosticLinkGenerator;
+import echoic.linkgenerator.core.interfaces.AgnosticLinkGenerator;
 import echoic.linkgenerator.core.MusicEntity;
-import echoic.linkgenerator.core.unittests.SearcherConverter;
+import echoic.linkgenerator.core.interfaces.SearcherConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
@@ -26,9 +26,18 @@ public class LinkReturnerRestController
     @GetMapping("{searchTerm}")
     public MusicEntity getLinks(@PathVariable("searchTerm") String searchTerm)
     {
-        MusicEntity musicEntity = agnosticLinkGenerator.generateMusicEntity(searchTerm,searcherConverter);
-        List<MusicEntity> musicEntities = new ArrayList<>();
-        musicEntities.add(musicEntity);
-        return musicEntity;
+        MusicEntity musicEntity = null;
+        try
+        {
+            musicEntity = agnosticLinkGenerator.generateMusicEntity(searchTerm, searcherConverter);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            return musicEntity;
+        }
     }
 }

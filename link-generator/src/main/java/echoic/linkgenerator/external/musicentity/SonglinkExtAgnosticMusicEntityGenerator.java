@@ -1,6 +1,6 @@
 package echoic.linkgenerator.external.musicentity;
 
-import echoic.linkgenerator.core.unittests.ExternalAgnosticMusicEntityGenerator;
+import echoic.linkgenerator.core.interfaces.ExternalAgnosticMusicEntityGenerator;
 import echoic.linkgenerator.external.ExternalAgnosticMusicEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
