@@ -11,9 +11,7 @@ twitter:
 
 linkgenerator:
   url: http://localhost:8081/
-
 ---
-
 spring:
   profile: prod
 
