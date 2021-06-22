@@ -31,7 +31,7 @@ public class MusicEntityGeneratorImpl implements MusicEntityGenerator
         Map<String, String> urlVars = new HashMap<>();
         urlVars.put("searchTerm", searchTerm);
         try {
-            ResponseEntity<MusicEntity> response = restTemplate.getForEntity("http://localhost:8081/returnLinks/{searchTerm}",
+            ResponseEntity<MusicEntity> response = restTemplate.getForEntity(linkGeneratorUrl + "returnLinks/{searchTerm}",
                     MusicEntity.class, urlVars);
 
             if (response.hasBody() && response.getStatusCodeValue() == HttpStatus.OK.value())
